@@ -31,6 +31,20 @@ a{
     color: white;
 }
 
+.description{
+    color: var(--text-color);
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+.title{
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 /* layouts */
 .container{
@@ -41,5 +55,83 @@ a{
     padding: 5rem;
     background-color: #070707;
     grid-template-columns: 1fr 1fr;
+    gap: 4rem;
 }
 
+@media only screen and (max-width: 768px){
+    .container{
+       width: 100%;
+       grid-template-columns: 1fr;
+       padding: 3rem;
+       gap: 7rem;
+    }
+}
+
+.profile{
+    grid-column: 1/ -1;
+    margin-bottom: 2rem;
+}
+
+/* profile styles */
+
+.profile-container{
+    display: flex;
+    /* align-items: center; */
+    gap: 2rem;
+}
+
+.profile-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.firstName{
+    color:white;
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 4rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: -0.8rem;
+}
+.lastName{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: clamp(2.5rem, 15vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+}
+.profile-title{
+    /* color: var(--primary-color); */
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.download-btn{
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+
+}
+.download-btn:hover{
+    color: var(--primary-color);
+    transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 768px){
+    .profile-container{
+        flex-direction: column;
+        /* align-items: center; */
+        /* text-align: center; */
+    }
+}
+
+/* expertise styles */
+.skills-list{
+   margin-top: 1rem;
+   margin-left: 2rem;
+   line-height: 2;
+}
